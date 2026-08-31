@@ -9,8 +9,14 @@ import { FinalCta } from "@/components/sections/FinalCta";
 export const metadata: Metadata = {
   title: "Solutions — Yaza Group",
   description:
-    "Individual specialists or full project teams — shaped around the work, not a template.",
+    "Individual specialists or full project teams, shaped around the work, not a template.",
 };
+
+const audiences = [
+  "Startups scaling their technology teams",
+  "Enterprises managing complex, multi phase projects",
+  "Organizations, in India and beyond, seeking a dependable talent partner",
+];
 
 export default function SolutionsPage() {
   return (
@@ -19,8 +25,8 @@ export default function SolutionsPage() {
       <main>
         <PageHero
           eyebrow="Solutions"
-          title="Shaped Around the Work. Not a Template."
-          copy="Some requirements need one specific expert. Others need a full team built around a stack, a timeline, and a delivery outcome. We start by understanding which."
+          title="Shaped Around the Work, Not a Template."
+          copy="Some engagements need one specialist. Others need a full team. We size the solution to the problem, not the other way around."
         />
 
         <section className="bg-paper py-24 md:py-32">
@@ -36,9 +42,9 @@ export default function SolutionsPage() {
                       Individual Specialists
                     </h3>
                     <p className="mt-4 text-lg leading-relaxed text-ink/55">
-                      Specific expertise for specific requirements — a
-                      senior engineer, an architect, a data specialist —
-                      matched against the exact gap in your team.
+                      Developers, testers, architects, cloud and data
+                      professionals, DevOps specialists, brought in for the
+                      specific expertise a role demands.
                     </p>
                   </div>
                 </div>
@@ -54,13 +60,32 @@ export default function SolutionsPage() {
                       Full Project Teams
                     </h3>
                     <p className="mt-4 text-lg leading-relaxed text-paper/60">
-                      Complete capabilities built around a stack, a
-                      timeline, and a delivery requirement — assembled to
-                      move as one team from day one.
+                      Assembled around your stack, timeline, and delivery
+                      expectations, so a new initiative can move from day
+                      one.
                     </p>
                   </div>
                 </div>
               </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-ink py-24 md:py-32">
+          <div className="mx-auto max-w-6xl px-6 lg:px-10">
+            <Reveal className="max-w-xl">
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-amber">
+                Who We Work With
+              </p>
+            </Reveal>
+            <div className="mt-10 divide-y divide-paper/10 border-y border-paper/10">
+              {audiences.map((a, i) => (
+                <Reveal key={a} delay={i * 0.08}>
+                  <p className="py-7 text-balance font-display text-xl font-medium leading-snug text-paper sm:text-2xl">
+                    {a}
+                  </p>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>

@@ -8,15 +8,21 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Careers — Yaza Group",
   description:
-    "Contract, contract-to-hire, and permanent technology opportunities across India and beyond. A team that listens before placing.",
+    "Opportunities across contract, contract to hire, and permanent roles. A team that listens before it places you.",
 };
 
+const reasons = [
+  "Opportunities across contract, contract to hire, and permanent roles",
+  "Clients across India and beyond",
+  "A team that listens before it places you",
+];
+
 const journey = [
-  { n: "01", title: "Share your profile.", copy: "Tell us about your experience and where you want to grow." },
-  { n: "02", title: "Tell us what you're looking for.", copy: "Contract, contract-to-hire, or permanent — your call." },
-  { n: "03", title: "Get matched to the right opportunities.", copy: "Not every open role. The ones that actually fit." },
-  { n: "04", title: "Interview with support.", copy: "Prepared, informed, and never left guessing." },
-  { n: "05", title: "Start strong.", copy: "Support continues through the transition, not just the offer." },
+  { n: "01", title: "Share your profile." },
+  { n: "02", title: "Talk to us about what you are looking for." },
+  { n: "03", title: "Get matched to roles that genuinely fit." },
+  { n: "04", title: "Interview with our support alongside you." },
+  { n: "05", title: "Start strong, with us still checking in." },
 ];
 
 export default function CareersPage() {
@@ -27,35 +33,51 @@ export default function CareersPage() {
         <PageHero
           eyebrow="Careers"
           title="Build Your Next Chapter With Us."
-          copy="Contract opportunities. Contract-to-hire. Permanent roles. Across India and beyond — with a team that listens before placing."
+          copy="If you are an experienced technology professional exploring your next opportunity, we would like to know your story."
         />
 
         <section className="bg-paper py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6 lg:px-10">
             <Reveal className="max-w-xl">
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-amber-deep">
-                Your Path Forward
+                Why Professionals Choose Yaza Group
               </p>
-              <h2 className="mt-5 text-balance font-display text-3xl font-medium leading-tight text-ink sm:text-4xl">
+            </Reveal>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {reasons.map((r, i) => (
+                <Reveal key={r} delay={i * 0.08}>
+                  <p className="rounded-2xl border border-ink/10 p-6 text-lg leading-relaxed text-ink/70">
+                    {r}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-ink py-24 md:py-32">
+          <div className="mx-auto max-w-6xl px-6 lg:px-10">
+            <Reveal className="max-w-xl">
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-amber">
+                How It Works
+              </p>
+              <h2 className="mt-5 text-balance font-display text-3xl font-medium leading-tight text-paper sm:text-4xl">
                 Your Next Role Should Fit More Than Your Resume.
               </h2>
             </Reveal>
 
             <div className="relative mt-16">
-              <div className="absolute left-[23px] top-2 bottom-2 w-px bg-ink/10" />
+              <div className="absolute left-[23px] top-2 bottom-2 w-px bg-paper/10" />
               <div className="space-y-10">
                 {journey.map((j, i) => (
                   <Reveal key={j.n} delay={i * 0.08}>
                     <div className="relative flex items-start gap-6">
-                      <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-ink/15 bg-paper font-display text-sm text-ink/70">
+                      <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-amber/40 bg-ink font-display text-sm text-amber">
                         {j.n}
                       </div>
-                      <div className="pt-2">
-                        <p className="font-display text-xl font-medium text-ink">
-                          {j.title}
-                        </p>
-                        <p className="mt-1.5 text-sm text-ink/50">{j.copy}</p>
-                      </div>
+                      <p className="pt-3 font-display text-xl font-medium text-paper">
+                        {j.title}
+                      </p>
                     </div>
                   </Reveal>
                 ))}
@@ -64,20 +86,20 @@ export default function CareersPage() {
           </div>
         </section>
 
-        <section className="bg-ink py-24 md:py-32">
+        <section className="bg-paper py-24 md:py-32">
           <div className="mx-auto max-w-2xl px-6 text-center lg:px-10">
             <Reveal>
-              <h2 className="text-balance font-display text-3xl font-medium leading-tight text-paper sm:text-4xl">
+              <h2 className="text-balance font-display text-3xl font-medium leading-tight text-ink sm:text-4xl">
                 Ready to build your next chapter?
               </h2>
-              <p className="mx-auto mt-6 max-w-md text-balance text-lg leading-relaxed text-paper/60">
-                Share your profile and tell us what you&rsquo;re looking for
-                — we&rsquo;ll take it from there.
+              <p className="mx-auto mt-6 max-w-md text-balance text-lg leading-relaxed text-ink/55">
+                Share your profile and tell us what you are looking for. We
+                will take it from there.
               </p>
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center rounded-full bg-amber px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-amber-soft"
+                  className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-amber-deep"
                 >
                   Submit Your Profile
                 </Link>

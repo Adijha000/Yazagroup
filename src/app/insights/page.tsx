@@ -6,34 +6,29 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Insights — Yaza Group",
-  description: "Perspectives on technology staffing, augmentation, and building teams that work.",
+  description:
+    "Practical thinking on talent, teams, and technology delivery, written for the people who build businesses, not just the people who staff them.",
 };
 
-const insights = [
+const essays = [
   {
-    title: "Why the best hires rarely come from a job board",
-    topic: "Strategic Staffing",
+    title: "Why the Best Hires Rarely Come From a Job Board",
+    body: "The strongest technology professionals are rarely searching. They are working, delivering, and quietly open to the right opportunity, if someone happens to ask. Job boards catch people between roles. Real networks catch people at their best. This is the quiet advantage of working with a partner who already knows where to look, and who to call first.",
   },
   {
-    title: "Contract to hire as a smarter way to decide",
-    topic: "Engagement Models",
+    title: "Contract to Hire, a Smarter Way to Decide",
+    body: "Permanent hiring asks you to be certain before you have any real evidence. The contract to hire flips that order. You watch someone work before you commit to them long term, and the decision that follows is no longer a guess. For roles where fit matters as much as skill, that difference is worth the extra step.",
   },
   {
-    title: "Why augmentation is not a backup plan",
-    topic: "Project Augmentation",
+    title: "Augmentation Is Not a Backup Plan",
+    body: "Teams often reach for augmentation only when a deadline is already at risk. Used proactively, it is not a rescue measure, it is a growth lever, capacity added exactly where a project needs it, without the long runway of a permanent hire. The businesses that use it well treat it as strategy, not emergency response.",
   },
-  {
-    title: "Reducing time to hire without lowering the bar",
-    topic: "Consulting First",
-  },
-  {
-    title: "What makes technical interviews useful",
-    topic: "Hiring Process",
-  },
-  {
-    title: "Planning headcount alongside growth",
-    topic: "Workforce Planning",
-  },
+];
+
+const moreOnTheWay = [
+  "Reducing time to hire without lowering the bar",
+  "What makes a technical interview actually useful",
+  "Planning headcount alongside growth, not after it",
 ];
 
 export default function InsightsPage() {
@@ -44,30 +39,42 @@ export default function InsightsPage() {
         <PageHero
           eyebrow="Insights"
           title="Perspectives Worth Sharing."
-          copy="Strategic thinking on technology talent, drawn from how we actually work with clients and candidates."
+          copy="Practical thinking on talent, teams, and technology delivery, written for the people who build businesses, not just the people who staff them."
         />
 
         <section className="bg-paper py-24 md:py-32">
-          <div className="mx-auto max-w-4xl px-6 lg:px-10">
-            <div className="divide-y divide-ink/10 border-y border-ink/10">
-              {insights.map((post, i) => (
-                <Reveal key={post.title} delay={i * 0.06}>
-                  <div className="group flex cursor-default flex-col gap-2 py-8 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                    <span className="text-xs font-medium uppercase tracking-[0.14em] text-amber-deep sm:w-48 sm:shrink-0">
-                      {post.topic}
-                    </span>
-                    <h3 className="font-display text-xl font-medium leading-snug text-ink transition-colors group-hover:text-amber-deep sm:text-2xl">
-                      {post.title}
-                    </h3>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-            <Reveal delay={0.4}>
-              <p className="mt-10 text-sm text-ink/40">
-                Full essays are coming soon. Reach out if you&rsquo;d like to
-                discuss any of these topics directly.
+          <div className="mx-auto max-w-3xl divide-y divide-ink/10 px-6 lg:px-10">
+            {essays.map((e, i) => (
+              <Reveal key={e.title} delay={i * 0.1}>
+                <article className="py-12 first:pt-0">
+                  <h2 className="font-display text-2xl font-medium leading-snug text-ink sm:text-3xl">
+                    {e.title}
+                  </h2>
+                  <p className="mt-5 text-lg leading-relaxed text-ink/60">
+                    {e.body}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-ink py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-6 lg:px-10">
+            <Reveal>
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-amber">
+                More on the Way
               </p>
+              <ul className="mt-6 space-y-4">
+                {moreOnTheWay.map((m) => (
+                  <li
+                    key={m}
+                    className="font-display text-xl font-medium text-paper/80 sm:text-2xl"
+                  >
+                    {m}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
         </section>

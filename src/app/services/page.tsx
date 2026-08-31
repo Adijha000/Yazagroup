@@ -8,40 +8,33 @@ import { FinalCta } from "@/components/sections/FinalCta";
 export const metadata: Metadata = {
   title: "Services — Yaza Group",
   description:
-    "Strategic Staffing, Project Augmentation, and Complete Project Teams — contract, contract-to-hire, and permanent, always consulting-first.",
+    "Staffing and project augmentation, across contract, contract to hire, and permanent engagement models. Consulting first, staffing second.",
 };
 
 const services = [
   {
-    title: "Strategic Staffing",
-    copy: "The right professionals for critical technology roles — sourced against the actual requirement, not a keyword match.",
+    title: "Staffing",
+    copy: "We help businesses bring in professionals who are ready to contribute from day one across development, testing, architecture, cloud, data, and DevOps disciplines.",
     tone: "bg-ink text-paper",
   },
   {
     title: "Project Augmentation",
-    copy: "Additional expertise and capacity for teams already moving, brought in without disrupting how they work.",
-    tone: "bg-moss-deep text-paper",
-  },
-  {
-    title: "Complete Project Teams",
-    copy: "The people and capabilities needed to take an initiative from idea to delivery, assembled around a stack and a timeline.",
+    copy: "When a project needs more capacity, we deploy professionals who integrate into existing teams and workflows with minimal ramp up time. When a project needs to be built from the ground up, we bring our team to take it from a blank page to delivery.",
     tone: "bg-amber-deep text-paper",
   },
 ];
 
 const engagementModels = [
-  {
-    title: "Contract",
-    copy: "Defined-term expertise for a specific project, deliverable, or capacity gap.",
-  },
-  {
-    title: "Contract to Hire",
-    copy: "A structured way to evaluate fit on real work before making a permanent decision.",
-  },
-  {
-    title: "Permanent Hiring",
-    copy: "Long-term technology professionals matched against your team's actual needs, not a generic role brief.",
-  },
+  { title: "Contract", copy: "For defined project timelines." },
+  { title: "Contract to Hire", copy: "To validate fit before a permanent commitment." },
+  { title: "Permanent Hiring", copy: "For core, long term positions." },
+];
+
+const process = [
+  { n: "01", title: "Understand the requirement, technical and business context alike." },
+  { n: "02", title: "Identify professionals who are a genuine fit, not just available." },
+  { n: "03", title: "Share a focused shortlist, not a long list." },
+  { n: "04", title: "Support onboarding until the fit is proven." },
 ];
 
 export default function ServicesPage() {
@@ -51,17 +44,17 @@ export default function ServicesPage() {
       <main>
         <PageHero
           eyebrow="Services"
-          title="The Right Capability. For the Work Ahead."
-          copy="Every engagement starts with the same question — what does the work actually require? The service model follows from the answer."
+          title="Consulting First, Staffing Second."
+          copy="We approach every engagement as consultants before we approach it as a staffing provider. That distinction shapes everything, how we scope a role, how we evaluate a fit, and how we measure success."
         />
 
         <section className="bg-paper py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {services.map((s, i) => (
                 <Reveal key={s.title} delay={i * 0.1}>
                   <div
-                    className={`flex h-full min-h-[300px] flex-col justify-between rounded-3xl p-8 ${s.tone}`}
+                    className={`flex h-full min-h-[280px] flex-col justify-between rounded-3xl p-8 sm:p-10 ${s.tone}`}
                   >
                     <span className="text-sm font-medium opacity-50">
                       0{i + 1}
@@ -70,7 +63,7 @@ export default function ServicesPage() {
                       <h3 className="font-display text-2xl font-medium leading-snug">
                         {s.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-relaxed opacity-70">
+                      <p className="mt-3 text-base leading-relaxed opacity-70">
                         {s.copy}
                       </p>
                     </div>
@@ -105,6 +98,33 @@ export default function ServicesPage() {
                   </div>
                 </Reveal>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-paper py-24 md:py-32">
+          <div className="mx-auto max-w-6xl px-6 lg:px-10">
+            <Reveal className="max-w-xl">
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-amber-deep">
+                How We Work
+              </p>
+            </Reveal>
+            <div className="relative mt-16">
+              <div className="absolute left-0 right-0 top-6 hidden h-px bg-ink/10 md:block" />
+              <div className="grid gap-10 md:grid-cols-4 md:gap-6">
+                {process.map((s, i) => (
+                  <Reveal key={s.n} delay={i * 0.1}>
+                    <div className="relative">
+                      <div className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-ink/15 bg-paper font-display text-sm text-ink/70">
+                        {s.n}
+                      </div>
+                      <p className="font-display text-lg font-medium leading-snug text-ink">
+                        {s.title}
+                      </p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
         </section>

@@ -5,8 +5,9 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Yaza Group",
-  description: "Whether the need is urgent or still taking shape, we are ready to listen.",
+  title: "Contact Us — Yaza Group",
+  description:
+    "Whether the need is urgent or still taking shape, we are ready to listen and help you find the right people for it.",
 };
 
 export default function ContactPage() {
@@ -31,16 +32,33 @@ export default function ContactPage() {
                   </h1>
                   <p className="mt-6 max-w-sm text-balance text-lg leading-relaxed text-paper/60">
                     Whether the need is urgent or still taking shape, we are
-                    ready to listen.
+                    ready to listen and help you find the right people for
+                    it.
                   </p>
 
                   <div className="mt-12 space-y-6 border-t border-paper/10 pt-8">
                     <div>
                       <p className="text-xs font-medium uppercase tracking-[0.14em] text-paper/40">
-                        Office
+                        Company
                       </p>
                       <p className="mt-2 font-display text-lg text-paper">
-                        Jaipur, Rajasthan, India
+                        YAZA IT Solution and Consulting Private Limited
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-[0.14em] text-paper/40">
+                        Registered Address
+                      </p>
+                      <p className="mt-2 font-display text-lg text-paper">
+                        Ansal Sushant City, Kalwar Road, Jaipur, 303706
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-[0.14em] text-paper/40">
+                        Headquarters
+                      </p>
+                      <p className="mt-2 font-display text-lg text-paper">
+                        Jaipur, Rajasthan
                       </p>
                     </div>
                     <div>
@@ -48,7 +66,7 @@ export default function ContactPage() {
                         Email
                       </p>
                       <p className="mt-2 font-display text-lg text-paper/50">
-                        [ configure contact email ]
+                        [ to be provided by Yaza Group ]
                       </p>
                     </div>
                     <div>
@@ -56,7 +74,7 @@ export default function ContactPage() {
                         Phone
                       </p>
                       <p className="mt-2 font-display text-lg text-paper/50">
-                        [ configure contact number ]
+                        [ to be provided by Yaza Group ]
                       </p>
                     </div>
                   </div>

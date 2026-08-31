@@ -2,19 +2,24 @@ import { Reveal } from "../Reveal";
 
 const services = [
   {
-    title: "Strategic Staffing",
-    copy: "The right professionals for critical technology roles.",
+    title: "Staffing",
+    copy: "For roles that need the right people, not just any person.",
     tone: "bg-ink text-paper",
   },
   {
     title: "Project Augmentation",
-    copy: "Additional expertise and capacity for teams already moving.",
+    copy: "For teams that need more capacity without more overhead.",
     tone: "bg-moss-deep text-paper",
   },
   {
-    title: "Complete Project Teams",
-    copy: "The people and capabilities needed to take an initiative from idea to delivery.",
+    title: "Engagement Models",
+    copy: "Contract, Contract to Hire, and Permanent engagement models.",
     tone: "bg-amber-deep text-paper",
+  },
+  {
+    title: "Ready to Deliver",
+    copy: "Access to experienced professionals, ready to start quickly.",
+    tone: "bg-moss text-ink",
   },
 ];
 
@@ -31,21 +36,21 @@ export function WhatWeDo() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.1}>
+            <Reveal key={s.title} delay={i * 0.08}>
               <div
-                className={`group relative flex h-full min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl p-8 transition-transform duration-500 hover:-translate-y-1.5 ${s.tone}`}
+                className={`group relative flex h-full min-h-[260px] flex-col justify-between overflow-hidden rounded-3xl p-7 transition-transform duration-500 hover:-translate-y-1.5 ${s.tone}`}
               >
-                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/5 blur-2xl transition-opacity duration-500 group-hover:opacity-80" />
+                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl transition-opacity duration-500 group-hover:opacity-80" />
                 <span className="text-sm font-medium opacity-50">
                   0{i + 1}
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl font-medium leading-snug">
+                  <h3 className="font-display text-xl font-medium leading-snug">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed opacity-70">
+                  <p className="mt-3 text-sm leading-relaxed opacity-75">
                     {s.copy}
                   </p>
                 </div>

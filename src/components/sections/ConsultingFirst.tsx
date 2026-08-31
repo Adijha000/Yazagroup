@@ -22,9 +22,10 @@ export function ConsultingFirst() {
               Staffing Second.
             </h2>
             <p className="mt-6 max-w-md text-balance text-lg leading-relaxed text-paper/60">
-              We begin with the problem. The project. The context. The
-              timeline. The missing expertise. Only then do we talk about
-              people.
+              We approach every engagement as consultants before we
+              approach it as a staffing provider. That distinction shapes
+              everything, how we scope a role, how we evaluate a fit, and
+              how we measure success.
             </p>
           </Reveal>
 

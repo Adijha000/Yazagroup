@@ -10,7 +10,7 @@ const areas = [
     copy: "For enterprise delivery teams under deadline pressure.",
   },
   {
-    title: "Specialist Expertise",
+    title: "Specialist Placements",
     copy: "Across cloud, data, and DevOps engagements.",
   },
 ];
@@ -27,12 +27,19 @@ export function OurWork() {
             Proof Is in the Placement.
           </h2>
           <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-paper/60">
-            Detailed case studies are still being developed. Here is where
-            we&rsquo;ve delivered so far.
+            We measure our work by what happens after the placement, how
+            quickly someone becomes productive, how well they fit the team,
+            and whether the client comes back for the next requirement.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <Reveal delay={0.1}>
+          <p className="mt-14 text-xs font-medium uppercase tracking-[0.14em] text-paper/40">
+            Where We Have Delivered
+          </p>
+        </Reveal>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           {areas.map((a, i) => (
             <Reveal key={a.title} delay={i * 0.1}>
               <div className="h-full rounded-3xl border border-paper/10 p-8 transition-colors hover:border-amber/30">
@@ -46,6 +53,13 @@ export function OurWork() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.3}>
+          <p className="mt-10 text-sm text-paper/40">
+            Detailed case studies will be added here as client engagements
+            are finalized for publication.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

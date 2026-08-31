@@ -22,7 +22,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-paper/15 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.14em] text-paper/60"
             >
-              Consulting First. Staffing Second.
+              Business Consulting and Services
             </motion.p>
 
             <motion.h1
@@ -40,9 +40,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.22 }}
               className="mt-7 max-w-xl text-balance text-lg leading-relaxed text-paper/65"
             >
-              Yaza Group helps organizations strengthen critical roles and
-              project teams with the right expertise, exactly when the work
-              demands it.
+              Yaza Group is a business consulting firm helping organizations
+              staff critical roles and strengthen project teams, on demand,
+              with people who are ready to deliver.
             </motion.p>
 
             <motion.div
@@ -61,7 +61,7 @@ export function Hero() {
                 href="/services"
                 className="inline-flex items-center rounded-full border border-paper/20 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:border-paper/40 hover:bg-paper/5"
               >
-                Explore Our Services
+                Our Services
               </Link>
             </motion.div>
           </div>

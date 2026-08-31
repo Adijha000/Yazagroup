@@ -5,9 +5,10 @@ const columns = [
   {
     title: "Company",
     links: [
-      { href: "/about", label: "About" },
-      { href: "/careers", label: "Careers" },
-      { href: "/insights", label: "Insights" },
+      { href: "/about", label: "About Us" },
+      { href: "/our-work", label: "Our Work" },
+      { href: "/why-us", label: "Why Choose Us" },
+      { href: "/testimonials", label: "Testimonials" },
     ],
   },
   {
@@ -15,6 +16,8 @@ const columns = [
     links: [
       { href: "/services", label: "Services" },
       { href: "/solutions", label: "Solutions" },
+      { href: "/insights", label: "Insights" },
+      { href: "/careers", label: "Careers" },
       { href: "/contact", label: "Contact" },
     ],
   },
