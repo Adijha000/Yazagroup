@@ -112,13 +112,11 @@ type LogoProps = {
 
 export function Logo({
   className,
-  markClassName = "h-9 w-9",
   wordmarkClassName = "text-xl",
   variant = "dark",
 }: LogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <LogoMark className={markClassName} variant={variant} />
+    <span className={`inline-flex items-center ${className ?? ""}`}>
       <span
         className={`font-display font-medium tracking-tight ${wordmarkClassName}`}
         style={{ color: variant === "dark" ? "var(--color-ink)" : "var(--color-paper)" }}
