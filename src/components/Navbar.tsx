@@ -21,7 +21,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mt-4 flex items-center justify-between rounded-full border border-ink/10 bg-paper/80 px-5 py-3 backdrop-blur-md shadow-[0_1px_0_0_rgba(18,20,15,0.04)]">
           <Link href="/" className="shrink-0">
-            <Logo markClassName="h-8 w-8" wordmarkClassName="text-lg" />
+            <Logo markClassName="h-12 w-12" wordmarkClassName="text-lg" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -39,7 +39,7 @@ export function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-amber-deep"
+              className="btn-shine inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-amber-deep"
             >
               Talk to Our Team
             </Link>

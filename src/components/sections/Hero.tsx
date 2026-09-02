@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { HeroNetwork } from "../HeroNetwork";
+import { Tilt } from "../Tilt";
 
 export function Hero() {
   return (
@@ -61,7 +62,7 @@ export function Hero() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full bg-amber px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-amber-soft"
+                className="btn-shine inline-flex items-center rounded-full bg-amber px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-amber-soft"
               >
                 Talk to Our Team
               </Link>
@@ -80,7 +81,9 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="relative h-[340px] w-full sm:h-[400px] lg:h-[440px]"
           >
-            <HeroNetwork />
+            <Tilt className="h-full w-full" max={6}>
+              <HeroNetwork />
+            </Tilt>
           </motion.div>
         </div>
       </div>

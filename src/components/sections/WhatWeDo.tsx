@@ -1,5 +1,5 @@
 import { Reveal } from "../Reveal";
-import { IconPeople, IconLayers, IconHandshake, IconRocket } from "../Icons";
+import { IconPeople, IconLayers, IconContract, IconRocket } from "../Icons";
 
 const services = [
   {
@@ -18,7 +18,7 @@ const services = [
     title: "Engagement Models",
     copy: "Contract, Contract to Hire, and Permanent engagement models.",
     tone: "bg-amber-deep text-paper",
-    Icon: IconHandshake,
+    Icon: IconContract,
   },
   {
     title: "Ready to Deliver",

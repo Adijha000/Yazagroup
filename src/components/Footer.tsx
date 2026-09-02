@@ -30,7 +30,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:gap-10">
           <div>
-            <Logo variant="light" markClassName="h-9 w-9" wordmarkClassName="text-xl" />
+            <Logo variant="light" markClassName="h-14 w-14" wordmarkClassName="text-xl" />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-paper/45">
               Yaza IT Solution and Consulting Private Limited. A consulting
               partner first, staffing partner second — built around the work

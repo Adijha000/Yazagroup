@@ -19,7 +19,7 @@ export function FinalCta() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-amber-deep"
+              className="btn-shine inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-amber-deep"
             >
               Talk to Our Team
             </Link>

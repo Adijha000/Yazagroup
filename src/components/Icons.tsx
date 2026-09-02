@@ -51,6 +51,17 @@ export function IconRocket({ className }: IconProps) {
   );
 }
 
+export function IconContract({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 32 32" className={className} {...base}>
+      <path d="M9 3h10l6 6v18a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+      <path d="M19 3v6h6" />
+      <path d="M11 16h10M11 20h10M11 24h6" opacity="0.6" />
+      <path d="M11 12.5l1.8 1.8L16 11" />
+    </svg>
+  );
+}
+
 export function IconTarget({ className }: IconProps) {
   return (
     <svg viewBox="0 0 32 32" className={className} {...base}>
