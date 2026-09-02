@@ -14,6 +14,7 @@ export function PageHero({
     <section className="relative overflow-hidden bg-ink pt-40 pb-20 md:pt-48 md:pb-24">
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute -top-40 right-0 h-[480px] w-[480px] rounded-full bg-amber/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-20 h-[360px] w-[360px] rounded-full bg-sky/10 blur-3xl" />
       </div>
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"

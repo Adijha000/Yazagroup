@@ -11,6 +11,7 @@ export function Hero() {
       {/* ambient background texture */}
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute -top-40 right-0 h-[560px] w-[560px] rounded-full bg-amber/10 blur-3xl" />
+        <div className="absolute top-1/3 -left-20 h-[380px] w-[380px] rounded-full bg-sky/15 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[420px] w-[420px] rounded-full bg-moss/20 blur-3xl" />
       </div>
       <div
@@ -79,7 +80,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="relative h-[340px] w-full sm:h-[400px] lg:h-[440px]"
+            className="relative hidden h-[300px] w-full sm:block sm:h-[360px] lg:h-[440px]"
           >
             <Tilt className="h-full w-full" max={6}>
               <HeroNetwork />

@@ -5,7 +5,7 @@ const services = [
   {
     title: "Staffing",
     copy: "For roles that need the right people, not just any person.",
-    tone: "bg-ink text-paper",
+    tone: "bg-sky-deep text-paper",
     Icon: IconPeople,
   },
   {

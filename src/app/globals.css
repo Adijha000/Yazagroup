@@ -1,20 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Base */
-  --color-ink: #12140f;        /* deep charcoal-black, primary base */
-  --color-ink-soft: #1c1f18;   /* secondary panels on dark */
+  /* Base — deep globe navy, echoing the logo's blue hemisphere */
+  --color-ink: #0d2438;
+  --color-ink-soft: #153a56;
   --color-paper: #f7f3ea;      /* warm off-white */
   --color-paper-soft: #efe9db;
 
   /* Sun / Solar */
-  --color-amber: #d98a3d;      /* warm sunrise amber, primary accent */
-  --color-amber-deep: #b5672a; /* deeper amber for text-on-light */
-  --color-amber-soft: #f0c48a;
+  --color-amber: #e8922f;      /* logo sunrise orange, primary accent */
+  --color-amber-deep: #b5671f; /* deeper amber for text-on-light */
+  --color-amber-soft: #f6c579;
 
-  /* Earth / Nature */
-  --color-moss: #5c6e4f;       /* muted earthy green */
-  --color-moss-deep: #3f4d36;
+  /* Globe / Sky — logo's blue hemisphere as a secondary accent */
+  --color-sky: #2f8fd1;
+  --color-sky-deep: #1c6199;
+  --color-sky-soft: #8fc7ec;
+
+  /* Earth / Nature — logo leaf green */
+  --color-moss: #2f9350;
+  --color-moss-deep: #1f6b3b;
 
   /* Metallic / atmosphere */
   --color-gold: #c9a876;
@@ -34,6 +39,9 @@
   --color-amber: var(--color-amber);
   --color-amber-deep: var(--color-amber-deep);
   --color-amber-soft: var(--color-amber-soft);
+  --color-sky: var(--color-sky);
+  --color-sky-deep: var(--color-sky-deep);
+  --color-sky-soft: var(--color-sky-soft);
   --color-moss: var(--color-moss);
   --color-moss-deep: var(--color-moss-deep);
   --color-gold: var(--color-gold);
