@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { HeroNetwork } from "./HeroNetwork";
+import { OrbitGraphic } from "./OrbitGraphic";
 
 export function PageHero({
   eyebrow,
@@ -24,9 +24,7 @@ export function PageHero({
           backgroundSize: "28px 28px",
         }}
       />
-      <div className="pointer-events-none absolute -right-16 bottom-0 hidden h-[300px] w-[420px] opacity-[0.35] lg:block">
-        <HeroNetwork />
-      </div>
+      <OrbitGraphic className="pointer-events-none absolute -right-10 -bottom-16 hidden h-[340px] w-[340px] opacity-70 lg:block" />
       <div className="relative mx-auto max-w-4xl px-6 lg:px-10">
         <Reveal>
           <p className="mb-6 text-xs font-medium uppercase tracking-[0.14em] text-amber">

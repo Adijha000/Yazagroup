@@ -65,6 +65,20 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Yaza IT Solution and Consulting Private Limited.</p>
           <p>Jaipur, Rajasthan, India</p>
         </div>
+
+        <div className="mt-6 text-xs text-paper/30">
+          <p>
+            Website developed and made by{" "}
+            <a
+              href="https://aibootstrapper.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-paper/50 underline underline-offset-2 transition-colors hover:text-amber"
+            >
+              AIBootstrapper
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

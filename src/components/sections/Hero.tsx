@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { HeroNetwork } from "../HeroNetwork";
+import { ServiceStack3D } from "../ServiceStack3D";
 import { Tilt } from "../Tilt";
 
 export function Hero() {
@@ -80,10 +80,10 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="relative hidden h-[300px] w-full sm:block sm:h-[360px] lg:h-[440px]"
+            className="relative hidden h-[320px] w-full sm:block sm:h-[380px] lg:h-[460px]"
           >
-            <Tilt className="h-full w-full" max={6}>
-              <HeroNetwork />
+            <Tilt className="h-full w-full" max={8}>
+              <ServiceStack3D />
             </Tilt>
           </motion.div>
         </div>
