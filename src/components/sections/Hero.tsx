@@ -12,6 +12,14 @@ export function Hero() {
         <div className="absolute -top-40 right-0 h-[560px] w-[560px] rounded-full bg-amber/10 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[420px] w-[420px] rounded-full bg-moss/20 blur-3xl" />
       </div>
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, var(--color-paper) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">

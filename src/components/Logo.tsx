@@ -4,14 +4,15 @@ type LogoMarkProps = {
 };
 
 const INDIA_PATH =
-  "M96.1 35.0 L102.4 43.9 L111.8 49.9 L123.7 55.9 L129.2 64.9 " +
-  "L122.9 70.8 L115.0 67.8 L108.7 76.8 L111.8 88.8 L108.7 103.7 " +
-  "L110.3 121.6 L107.1 139.6 L102.4 157.5 L96.1 172.4 L91.3 157.5 " +
-  "L88.2 139.6 L85.0 121.6 L86.6 103.7 L83.4 88.8 L86.6 76.8 " +
-  "L80.3 70.8 L77.1 61.9 L81.9 55.9 L88.2 49.9 L93.9 43.9 Z";
+  "M98.0 30.0 L103.1 40.0 L110.8 48.0 L121.0 56.0 L131.2 66.0 " +
+  "L135.0 76.0 L128.6 80.0 L121.0 76.0 L113.3 84.0 L118.4 96.0 " +
+  "L113.3 110.0 L117.2 124.0 L113.3 140.0 L108.2 156.0 L100.6 170.0 " +
+  "L94.2 156.0 L90.3 140.0 L87.8 124.0 L83.9 110.0 L87.8 96.0 " +
+  "L81.4 84.0 L75.0 76.0 L78.8 64.0 L85.2 56.0 L90.3 48.0 L94.2 40.0 Z";
 
 export function LogoMark({ className, variant = "dark" }: LogoMarkProps) {
   const ringColor = variant === "dark" ? "var(--color-ink)" : "var(--color-paper)";
+  const negativeSpace = variant === "dark" ? "var(--color-paper)" : "var(--color-ink)";
 
   return (
     <svg
@@ -24,11 +25,11 @@ export function LogoMark({ className, variant = "dark" }: LogoMarkProps) {
     >
       <defs>
         <linearGradient id="yazaSun" x1="20" y1="20" x2="100" y2="180" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f3b93e" />
+          <stop offset="0%" stopColor="var(--color-amber-soft)" />
           <stop offset="100%" stopColor="var(--color-amber-deep)" />
         </linearGradient>
         <linearGradient id="yazaGlobe" x1="100" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#1f3a63" />
+          <stop offset="0%" stopColor="var(--color-ink-soft)" />
           <stop offset="100%" stopColor="var(--color-ink)" />
         </linearGradient>
         <clipPath id="yazaCircle">
@@ -71,13 +72,13 @@ export function LogoMark({ className, variant = "dark" }: LogoMarkProps) {
         <rect x="100" y="10" width="90" height="180" fill="url(#yazaGlobe)" />
 
         {/* globe lattice */}
-        <g clipPath="url(#yazaRight)" stroke="rgba(247,243,234,0.55)" strokeWidth="1.4" fill="none">
+        <g clipPath="url(#yazaRight)" stroke="rgba(247,243,234,0.5)" strokeWidth="1.4" fill="none">
           <path d="M100 20 C140 45 140 155 100 180" />
           <path d="M100 20 C160 55 160 145 100 180" />
           <ellipse cx="145" cy="100" rx="45" ry="35" transform="rotate(-18 145 100)" />
           <ellipse cx="140" cy="100" rx="42" ry="20" transform="rotate(10 140 100)" />
         </g>
-        <g clipPath="url(#yazaRight)" fill="var(--color-paper)">
+        <g clipPath="url(#yazaRight)" fill="var(--color-amber-soft)">
           <circle cx="122" cy="52" r="3" />
           <circle cx="150" cy="60" r="3" />
           <circle cx="168" cy="90" r="3" />
@@ -87,7 +88,7 @@ export function LogoMark({ className, variant = "dark" }: LogoMarkProps) {
         </g>
 
         {/* India, unified negative space */}
-        <path d={INDIA_PATH} fill="var(--color-paper)" />
+        <path d={INDIA_PATH} fill="var(--color-paper)" fillOpacity="0.96" />
       </g>
 
       <circle
@@ -108,20 +109,38 @@ type LogoProps = {
   markClassName?: string;
   wordmarkClassName?: string;
   variant?: "light" | "dark";
+  showTagline?: boolean;
 };
 
 export function Logo({
   className,
+  markClassName = "h-9 w-9",
   wordmarkClassName = "text-xl",
   variant = "dark",
+  showTagline = false,
 }: LogoProps) {
+  const textColor = variant === "dark" ? "var(--color-ink)" : "var(--color-paper)";
+  const taglineColor = variant === "dark" ? "var(--color-ink)" : "var(--color-paper)";
+
   return (
-    <span className={`inline-flex items-center ${className ?? ""}`}>
-      <span
-        className={`font-display font-medium tracking-tight ${wordmarkClassName}`}
-        style={{ color: variant === "dark" ? "var(--color-ink)" : "var(--color-paper)" }}
-      >
-        Yaza
+    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
+      <LogoMark className={`${markClassName} shrink-0`} variant={variant} />
+      <span className="inline-flex flex-col leading-none">
+        <span
+          className={`font-display font-medium tracking-tight ${wordmarkClassName}`}
+          style={{ color: textColor }}
+        >
+          Yaza
+          <span style={{ color: "var(--color-amber)" }}>.</span>
+        </span>
+        {showTagline && (
+          <span
+            className="mt-1 text-[9px] font-medium uppercase tracking-[0.16em] opacity-50"
+            style={{ color: taglineColor }}
+          >
+            Business Consulting &amp; Services
+          </span>
+        )}
       </span>
     </span>
   );

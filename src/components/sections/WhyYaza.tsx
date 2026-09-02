@@ -1,11 +1,12 @@
 import { Reveal } from "../Reveal";
+import { IconCompass, IconGlobe, IconTarget, IconShield, IconGrid } from "../Icons";
 
 const pillars = [
-  { title: "Consulting Led", copy: "We start with the problem, not the resume." },
-  { title: "Global Reach", copy: "A network that extends across India and beyond." },
-  { title: "Precision", copy: "Fewer profiles, better matches." },
-  { title: "Reliability", copy: "The same discipline, every engagement." },
-  { title: "Range", copy: "Any IT role, any technology stack." },
+  { title: "Consulting Led", copy: "We start with the problem, not the resume.", Icon: IconCompass },
+  { title: "Global Reach", copy: "A network that extends across India and beyond.", Icon: IconGlobe },
+  { title: "Precision", copy: "Fewer profiles, better matches.", Icon: IconTarget },
+  { title: "Reliability", copy: "The same discipline, every engagement.", Icon: IconShield },
+  { title: "Range", copy: "Any IT role, any technology stack.", Icon: IconGrid },
 ];
 
 export function WhyYaza() {
@@ -30,6 +31,7 @@ export function WhyYaza() {
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.06} y={16}>
               <div className="flex h-full flex-col gap-3 bg-paper p-7">
+                <p.Icon className="h-7 w-7 text-amber-deep" />
                 <span className="font-display text-lg font-medium text-ink">
                   {p.title}
                 </span>

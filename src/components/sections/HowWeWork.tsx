@@ -1,25 +1,30 @@
 import { Reveal } from "../Reveal";
+import { IconTarget, IconPeople, IconLayers, IconAnchor } from "../Icons";
 
 const steps = [
   {
     n: "01",
     title: "Understand the requirement.",
     copy: "Technical and business context alike.",
+    Icon: IconTarget,
   },
   {
     n: "02",
     title: "Identify genuine fit.",
     copy: "Not simply available talent.",
+    Icon: IconPeople,
   },
   {
     n: "03",
     title: "Share a focused shortlist.",
     copy: "Fewer profiles. Better matches.",
+    Icon: IconLayers,
   },
   {
     n: "04",
     title: "Support the transition.",
     copy: "Until the fit is proven.",
+    Icon: IconAnchor,
   },
 ];
 
@@ -42,10 +47,11 @@ export function HowWeWork() {
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1}>
                 <div className="relative">
-                  <div className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-ink/15 bg-paper font-display text-sm text-ink/70">
-                    {s.n}
+                  <div className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-ink/15 bg-paper text-ink/70">
+                    <s.Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-xl font-medium leading-snug text-ink">
+                  <span className="text-xs font-medium text-ink/30">{s.n}</span>
+                  <h3 className="mt-1 font-display text-xl font-medium leading-snug text-ink">
                     {s.title}
                   </h3>
                   <p className="mt-2 text-sm text-ink/50">{s.copy}</p>

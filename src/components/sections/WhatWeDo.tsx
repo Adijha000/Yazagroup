@@ -1,25 +1,30 @@
 import { Reveal } from "../Reveal";
+import { IconPeople, IconLayers, IconHandshake, IconRocket } from "../Icons";
 
 const services = [
   {
     title: "Staffing",
     copy: "For roles that need the right people, not just any person.",
     tone: "bg-ink text-paper",
+    Icon: IconPeople,
   },
   {
     title: "Project Augmentation",
     copy: "For teams that need more capacity without more overhead.",
     tone: "bg-moss-deep text-paper",
+    Icon: IconLayers,
   },
   {
     title: "Engagement Models",
     copy: "Contract, Contract to Hire, and Permanent engagement models.",
     tone: "bg-amber-deep text-paper",
+    Icon: IconHandshake,
   },
   {
     title: "Ready to Deliver",
     copy: "Access to experienced professionals, ready to start quickly.",
     tone: "bg-moss text-ink",
+    Icon: IconRocket,
   },
 ];
 
@@ -43,9 +48,12 @@ export function WhatWeDo() {
                 className={`group relative flex h-full min-h-[260px] flex-col justify-between overflow-hidden rounded-3xl p-7 transition-transform duration-500 hover:-translate-y-1.5 ${s.tone}`}
               >
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl transition-opacity duration-500 group-hover:opacity-80" />
-                <span className="text-sm font-medium opacity-50">
-                  0{i + 1}
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium opacity-50">
+                    0{i + 1}
+                  </span>
+                  <s.Icon className="h-8 w-8 opacity-80 transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <div>
                   <h3 className="font-display text-xl font-medium leading-snug">
                     {s.title}

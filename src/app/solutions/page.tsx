@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { IconPeople, IconLayers } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Solutions — Yaza Group",
@@ -35,6 +36,7 @@ export default function SolutionsPage() {
               <Reveal>
                 <div className="flex h-full flex-col justify-between rounded-3xl border border-ink/10 p-10">
                   <div>
+                    <IconPeople className="mb-5 h-9 w-9 text-amber-deep" />
                     <span className="text-xs font-medium uppercase tracking-[0.14em] text-amber-deep">
                       One Requirement
                     </span>
@@ -53,6 +55,7 @@ export default function SolutionsPage() {
               <Reveal delay={0.1}>
                 <div className="flex h-full flex-col justify-between rounded-3xl bg-ink p-10 text-paper">
                   <div>
+                    <IconLayers className="mb-5 h-9 w-9 text-amber" />
                     <span className="text-xs font-medium uppercase tracking-[0.14em] text-amber">
                       A Full Delivery Effort
                     </span>
